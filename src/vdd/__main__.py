@@ -11,11 +11,13 @@ except ModuleNotFoundError:
 
 
 parser = ap.ArgumentParser("vdd", description=__doc__, formatter_class=ap.ArgumentDefaultsHelpFormatter)
+parser.set_defaults(fn=parser.print_help)
 
 
 def main():
     arguments = vars(parser.parse_args())
-    print(arguments)
+    fn = arguments.pop('fn')
+    fn(**arguments)
 
 
 if __name__ == '__main__':
