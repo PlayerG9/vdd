@@ -4,7 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-ffmpeg-python = "*"
+opencv-python = "*"
+pillow = "*"
 
 [dev-packages]
 better-exceptions = "*"
